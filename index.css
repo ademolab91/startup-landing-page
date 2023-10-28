@@ -1,0 +1,340 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 
+=============Body==============
+*/
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #e4e3ed;
+}
+
+/* 
+=============Main==============
+*/
+
+#main {
+  display: grid;
+  align-content: center;
+  gap: 2.5rem;
+  justify-content: center;
+  padding: 1.5rem;
+  /* min-height: 100vh; */
+}
+
+/* 
+=============Feature==============
+*/
+
+.feature {
+  background-color: #fff;
+  padding: 3.5rem 7.5rem;
+  border: none;
+  border-radius: 10px;
+}
+
+/* 
+=============Feature heading==============
+*/
+.feature > h3 {
+  font-weight: 700;
+  font-size: 42px;
+  text-align: center;
+  color: #1e0e62;
+  margin-bottom: 50px;
+}
+
+/* 
+=============Feature_2 heading==============
+*/
+.feature > p {
+  font-size: 22px;
+  font-weight: lighter;
+  color: #a1a1b0;
+  line-height: 32px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* 
+=============Feature info==============
+*/
+
+.feature > .feature-info {
+  display: grid;
+  gap: 1.5rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.feature > .feature-info article svg {
+  text-align: center;
+}
+
+.feature > .feature-info > article h5 {
+  margin: 1.5rem 0;
+  font-size: 22px;
+  color: #1e0e62;
+  line-height: 32px;
+  font-weight: 500;
+}
+
+.feature > .feature-info > article p {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #a1a1b0;
+}
+
+.feature-info > article > button {
+  background-color: transparent;
+  border: 1px solid #1e0e62;
+  border-radius: 50%;
+  margin-top: 50px;
+  padding: 10px 15px;
+}
+
+/* @media screen and (min-width: 576px) {
+    .feature > .feature-info {
+    }
+} */
+
+@media screen and (min-width: 900px) {
+  .feature > .feature-info {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 
+=============Feature_3 and feature_4 info==============
+*/
+
+.feature:nth-child(3) > .feature-info > article,
+.feature:nth-child(4) > .feature-info > article {
+  border: 2px solid #ebeaed;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.feature:nth-child(4) {
+  position: relative;
+  background-color: #e93a7d;
+  background-image: url(./images/tree-cloud.jpg);
+  background-size: cover;
+}
+
+.feature:nth-child(4) h3,
+.feature:nth-child(4) .tagline,
+.feature:nth-child(4) .feature-info h5,
+.feature:nth-child(4) .feature-info p {
+  color: #fff;
+}
+
+.feature:nth-child(4) > .feature-info > article > button {
+  border: none;
+  background-color: #e93a7d;
+  padding: 10px 30px;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.feature:nth-child(5) .feature-info article {
+  border: 2px solid #ebeaed;
+  border-radius: 13px;
+  padding: 0;
+}
+
+.feature:nth-child(5) .feature-info article img {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.feature:nth-child(5) .feature-info article h5,
+.feature:nth-child(5) .feature-info article p {
+  padding: 0 30px;
+}
+
+.feature:nth-child(6) {
+  background-image: url(images/tree-cloud.jpg);
+  text-align: left;
+}
+
+.feature:nth-child(6) > h3,
+.feature:nth-child(7) > h3,
+.feature:nth-child(6) > p,
+.feature:nth-child(7) > p {
+  text-align: left;
+}
+
+.feature:nth-child(6) .feature-info,
+.feature:nth-child(7) .feature-info,
+.feature:nth-child(8) .feature-info {
+  justify-content: left;
+  text-align: left;
+}
+
+.feature:nth-child(6) h3,
+.feature:nth-child(6) .feature-info h5,
+.feature:nth-child(6) .feature-info p {
+  color: #fff;
+}
+
+.feature:nth-child(6) .feature-info article:last-child {
+  border: 2px solid #ebeaed;
+  padding: 50px;
+}
+
+.feature:nth-child(8) .feature-info article {
+  display: flex;
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.feature:nth-child(8) .feature-info article svg {
+  padding-top: 30px;
+  width: 100px;
+}
+
+@media screen and (min-width: 900px) {
+  .feature:nth-child(6) {
+    justify-content: left;
+  }
+
+  .feature:nth-child(6) .feature-info,
+  .feature:nth-child(7) .feature-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feature:nth-child(6) .feature-info article {
+    text-align: start;
+    padding: 0 50px;
+  }
+}
